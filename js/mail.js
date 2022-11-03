@@ -19,20 +19,50 @@
 //Mail
 //crea la lista delle email - array
 //chiedi all'utente la sua email
-const emailAccettate = ["marco.rossi@gmail.com", "mario.bros@icloud.com", "indiana.jones@yahoo.it"];
+const emailAccettate = ["marco.rossi@gmail", "mario.bros@icloud.com", "indiana.jones@yahoo.it"];
 const userEmail = prompt("Ciao! Inserisci la tua email");
 console.log( userEmail );
 
+// chiedere a florian perchè l'ho usata...
+// devo usare questa :) !!!
 let trovata = false;
 
 for (let i = 0; i < emailAccettate.length; i++){
+
     const email = emailAccettate[i];
+    
+    if ( email === userEmail ){
 
-    if ( email === userEmail){
+        //trovata = true;
+        console.log( email + "  " + "coincide con la email nella lista" + "  " + i );
+
+        //alert ('email trovato');
         trovata = true;
-        console.log( email + "" + "coincide con la email nella lista" + i );
-    } else if (userEmail !== email ){
-        alert( "Mi dispiace ma la tua email non rientra nella lista")
-    }
 
+    } else {
+
+        //trovata = false;
+
+        //alert ('email NON trovato');
+    }
+    
+    /*
+    console.log("i",i);
+    console.log( "email", email);
+    console.log("userEmail", userEmail);
+    console.log( "trovata", trovata);
+    */
 }
+
+console.log('trovata', trovata);
+console.log('info', trovata === true);
+
+
+
+if ( trovata == true ){
+    console.log("coincide con la email nella lista");
+    alert ("coincide con la email nella lista");
+} else {
+    alert( "Mi dispiace ma la tua email non rientra nella lista");
+}
+
